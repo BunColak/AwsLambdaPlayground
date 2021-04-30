@@ -2,8 +2,16 @@ language: node_js
 node_js:
   - 14
 
+addons:
+  sonarcloud:
+    organization: "buncolak"
+    token:
+      secure: $SONAR_TOKEN
+
 script:
-- echo "skipping tests"
+  # other script steps might be done before running the actual analysis
+  - echo "skipping tests"
+  - sonar-scanner
 
 deploy:
   provider: lambda
