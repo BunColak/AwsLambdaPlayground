@@ -1,0 +1,12 @@
+language: node_js
+node_js:
+  - 14
+
+
+deploy:
+  provider: lambda
+  function_name: "hello"
+  region: "eu-central-1"
+  role: "arn:aws:iam::419870347460:role/service-role/hello-role-i3tyjsgr"
+  runtime: "nodejs14.x"
+  handler_name: "handler"
