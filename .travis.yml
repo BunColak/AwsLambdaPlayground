@@ -5,8 +5,6 @@ node_js:
 addons:
   sonarcloud:
     organization: "buncolak"
-    token:
-      secure: $SONAR_TOKEN
 
 script:
   # other script steps might be done before running the actual analysis
